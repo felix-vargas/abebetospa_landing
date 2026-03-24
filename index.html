@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Abebeto SpA | Consultoría Tecnológica de Alto Nivel</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="tailwind.config.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="bg-background selection:bg-primary/30">
+<!-- TopNavBar Implementation -->
+<nav class="bg-slate-950/60 backdrop-blur-xl docked full-width top-0 sticky z-50 transition-all duration-300">
+    <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+        <div class="text-2xl font-extrabold tracking-tight text-slate-50 font-headline">
+            Abebeto SpA
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-slate-300 hover:text-indigo-300 transition-colors body-lg" href="#servicios">Servicios</a>
+            <a class="text-slate-300 hover:text-indigo-300 transition-colors body-lg" href="#nosotros">Nosotros</a>
+            <a class="text-slate-300 hover:text-indigo-300 transition-colors body-lg" href="#contacto">Contacto</a>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <!-- Section 1: Hero -->
+    <section class="relative min-h-[85vh] flex items-center pt-20 pb-32 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute top-[-10%] left-[-5%] w-[50%] h-[60%] bg-primary/10 blur-[120px] rounded-full"></div>
+            <div class="absolute bottom-[-10%] right-[-5%] w-[40%] h-[50%] bg-secondary/10 blur-[100px] rounded-full"></div>
+        </div>
+        <div class="max-w-5xl mx-auto px-8 w-full flex flex-col items-center text-center relative z-10">
+            <div class="space-y-8 flex flex-col items-center">
+                <div class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/20 text-primary text-xs font-bold tracking-widest uppercase">
+                    Chile · Consultoría TI
+                </div>
+                <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
+                    Transformación Digital con <br class="hidden md:block" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Abebeto SpA</span>
+                </h1>
+                <p class="text-on-surface-variant text-xl md:text-2xl leading-relaxed max-w-3xl font-body mt-4">
+                    Consultoría TI, desarrollo de plataformas a medida y soluciones estratégicas para el sector público y privado en Chile. Impulsamos la innovación tecnológica de su negocio.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-8 justify-center">
+                    <a href="#contacto" class="bg-gradient-to-r from-primary to-primary-dim text-on-primary-fixed px-8 py-4 rounded-xl font-bold text-lg hover:scale-95 transition-all duration-300 shadow-xl shadow-primary/10">
+                        Agendar Consultoría
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Servicios (Bento Grid Style) -->
+    <section class="py-32 bg-surface" id="servicios">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="mb-20 space-y-4">
+                <h2 class="text-label-md uppercase tracking-[0.3em] text-primary font-bold">Capacidades</h2>
+                <h3 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface">Servicios de Ingeniería Digital</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="md:col-span-2 group p-8 rounded-3xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="web">web</span>
+                            <h4 class="font-headline text-2xl font-bold mb-4">Desarrollo de Plataformas Web a Medida</h4>
+                            <p class="text-on-surface-variant leading-relaxed max-w-md">Creamos arquitecturas escalables y seguras que responden a las necesidades específicas de su negocio, optimizando la experiencia del usuario final.</p>
+                        </div>
+                        <div class="mt-12 flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform">
+                            Ver más <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
+                        </div>
+                    </div>
+                    <div class="absolute right-[-10%] bottom-[-10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl transition-all duration-500 group-hover:bg-primary/10"></div>
+                </div>
+                <!-- Card 2 -->
+                <div class="group p-8 rounded-3xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container-high transition-all duration-500">
+                    <span class="material-symbols-outlined text-secondary text-4xl mb-6" data-icon="troubleshoot">troubleshoot</span>
+                    <h4 class="font-headline text-2xl font-bold mb-4">Análisis de Sistemas</h4>
+                    <p class="text-on-surface-variant leading-relaxed">Diagnóstico profundo de sus infraestructuras actuales para identificar cuellos de botella y oportunidades de mejora tecnológica.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="group p-8 rounded-3xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container-high transition-all duration-500">
+                    <span class="material-symbols-outlined text-tertiary text-4xl mb-6" data-icon="integration_instructions">integration_instructions</span>
+                    <h4 class="font-headline text-2xl font-bold mb-4">Integración de Soluciones</h4>
+                    <p class="text-on-surface-variant leading-relaxed">Conectamos sus herramientas y ecosistemas digitales para un flujo de información sin fricciones entre departamentos.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="md:col-span-2 group p-8 rounded-3xl bg-surface-container-low border border-outline-variant/5 hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="corporate_fare">corporate_fare</span>
+                            <h4 class="font-headline text-2xl font-bold mb-4">Consultoría en TI</h4>
+                            <p class="text-on-surface-variant leading-relaxed max-w-xl">Asesoría estratégica de alto nivel para la toma de decisiones tecnológicas en el sector público y privado, garantizando el retorno de inversión.</p>
+                        </div>
+                        <div class="mt-8 flex gap-3 flex-wrap">
+                            <span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-medium">Arquitectura Cloud</span>
+                            <span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-medium">Ciberseguridad</span>
+                            <span class="px-3 py-1 rounded-full bg-surface-container-highest text-on-surface-variant text-xs font-medium">Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Sobre Nosotros -->
+    <section class="py-32 relative" id="nosotros">
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="relative">
+                <div class="rounded-3xl overflow-hidden bg-surface-container-high p-1">
+                    <img alt="Análisis de datos estratégico" class="w-full h-full object-cover rounded-[1.25rem] opacity-70 grayscale" data-alt="Strategic data analysis dashboard on a laptop screen in a dark, minimalist office, focused lighting with soft purple reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEuEos0PCon0Jnt-q7KPpLPp-RxT4aIEvMCzwK-ebM7rwtukLf9GGd4-7o3knejxxVq8WhRE79EzY2by4UtVyA0oQWpPC-9WkZollrQ0mQV2HNLE0_0-CSeKwvSWx6Be1BY8Dgu3sLrVQJQ3k8HZ6fSjeKt-KyRtobwlffayZ6fVc0Fwhngix7JL1T1_RuGBrhc-ej8C6KkSjnequgQzt1MhHWWl4JNAoQUohgekujLW6mqxKw0SgvYRBgmRkwwfcBeM76riMYDNo"/>
+                </div>
+                <div class="absolute -bottom-10 -right-10 glass-card p-8 rounded-2xl border border-white/5 max-w-[280px] hidden md:block">
+                    <div class="text-4xl font-extrabold text-primary mb-2">+100</div>
+                    <div class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Proyectos Exitosos en Chile</div>
+                </div>
+            </div>
+            <div class="space-y-8">
+                <h2 class="text-label-md uppercase tracking-[0.3em] text-secondary font-bold">Nuestra Misión</h2>
+                <h3 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface leading-tight">Optimizamos la gestión mediante la excelencia técnica</h3>
+                <p class="text-on-surface-variant text-lg leading-relaxed font-body">
+                    En Abebeto SpA, creemos que la tecnología no es un fin en sí mismo, sino una palanca para la eficiencia operativa. Nuestra misión es transformar procesos complejos en flujos de trabajo simplificados, permitiendo que las organizaciones chilenas compitan en un mercado global con infraestructuras robustas, seguras y escalables.
+                </p>
+                <div class="space-y-6 pt-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-primary text-xl" data-icon="verified">verified</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-on-surface">Compromiso con la Calidad</h5>
+                            <p class="text-on-surface-variant text-sm">Estándares internacionales aplicados a la realidad local.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-secondary text-xl" data-icon="diversity_3">diversity_3</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-on-surface">Enfoque Centrado en el Cliente</h5>
+                            <p class="text-on-surface-variant text-sm">Entendemos sus dolores antes de proponer soluciones.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Contacto -->
+    <section class="py-32 bg-surface-container-low/30" id="contacto">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="max-w-4xl mx-auto glass-card p-8 md:p-16 rounded-[2.5rem] border border-white/5 shadow-2xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 relative z-10">
+                    <div>
+                        <h2 class="font-headline text-3xl font-extrabold text-on-surface mb-6">Iniciemos un proyecto juntos</h2>
+                        <p class="text-on-surface-variant mb-12">Estamos listos para elevar su infraestructura tecnológica. Contáctenos para una consultoría inicial sin costo.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+                                <span class="text-on-surface">Santiago, Chile</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+                                <span class="text-on-surface">contacto@abebeto.cl</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <span class="material-symbols-outlined text-primary" data-icon="phone_iphone">phone_iphone</span>
+                                <span class="text-on-surface">+56 2 2XXX XXXX</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Nombre Completo</label>
+                            <input class="w-full bg-surface-container-highest border-0 rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary/30 transition-all placeholder:text-outline-variant" placeholder="Ej. Juan Pérez" type="text"/>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Email Corporativo</label>
+                            <input class="w-full bg-surface-container-highest border-0 rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary/30 transition-all placeholder:text-outline-variant" placeholder="juan@empresa.cl" type="email"/>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-on-surface-variant mb-2">Mensaje</label>
+                            <textarea class="w-full bg-surface-container-highest border-0 rounded-xl px-4 py-3 text-on-surface focus:ring-2 focus:ring-primary/30 transition-all placeholder:text-outline-variant" placeholder="¿En qué podemos ayudarle?" rows="4"></textarea>
+                        </div>
+                        <button class="w-full bg-primary text-on-primary-fixed font-bold py-4 rounded-xl hover:bg-primary-dim transition-colors shadow-lg shadow-primary/20" type="submit">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Footer Implementation -->
+<footer class="bg-slate-950 border-t border-white/5 full-width bottom-0 mt-20">
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto">
+        <div class="mb-8 md:mb-0">
+            <div class="text-xl font-bold text-slate-200 font-headline mb-2">Abebeto SpA</div>
+            <div class="text-slate-500 text-xs uppercase tracking-widest font-label">Consultoría de Alto Nivel</div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Privacidad</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Términos de Servicio</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Continuidad Operativa</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Soporte</a>
+        </div>
+        <div class="text-slate-500 text-sm text-center md:text-right">
+            © 2026 Abebeto SpA. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+</body>
+</html>
