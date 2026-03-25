@@ -10,7 +10,16 @@
     <script src="tailwind.config.js"></script>
     <link href="styles.css" rel="stylesheet" />
 </head>
-<body class="bg-background selection:bg-primary/30">
+<body class="bg-background selection:bg-primary/30 relative">
+
+<!-- Ambient Background Effect -->
+<div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vh] bg-primary/10 blur-[120px] rounded-full animate-float"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40vw] h-[50vh] bg-secondary/10 blur-[100px] rounded-full animate-float-delayed"></div>
+    <div class="absolute top-[30%] left-[60%] w-[40vw] h-[40vh] bg-tertiary/10 blur-[120px] rounded-full animate-float-slow"></div>
+    <div class="absolute bottom-[20%] left-[10%] w-[35vw] h-[35vh] bg-primary/10 blur-[100px] rounded-full animate-float"></div>
+</div>
+
 <!-- TopNavBar Implementation -->
 <nav class="bg-slate-950/60 backdrop-blur-xl docked full-width top-0 sticky z-50 transition-all duration-300">
     <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
@@ -25,17 +34,13 @@
     </div>
 </nav>
 
-<main>
+<main class="relative z-10">
     <!-- Section 1: Hero -->
     <section class="relative min-h-[85vh] flex items-center pt-20 pb-32 overflow-hidden">
-        <div class="absolute inset-0 z-0">
-            <div class="absolute top-[-10%] left-[-5%] w-[50%] h-[60%] bg-primary/10 blur-[120px] rounded-full"></div>
-            <div class="absolute bottom-[-10%] right-[-5%] w-[40%] h-[50%] bg-secondary/10 blur-[100px] rounded-full"></div>
-        </div>
         <div class="max-w-5xl mx-auto px-8 w-full flex flex-col items-center text-center relative z-10">
             <div class="space-y-8 flex flex-col items-center">
                 <div class="inline-flex items-center px-3 py-1 rounded-full bg-surface-container-high border border-outline-variant/20 text-primary text-xs font-bold tracking-widest uppercase">
-                    Chile · Consultoría TI
+                    Consultoría y Desarrollo
                 </div>
                 <h1 class="font-headline text-5xl md:text-7xl lg:text-8xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
                     Transformación Digital con <br class="hidden md:block" /><span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Abebeto SpA</span>
@@ -53,7 +58,7 @@
     </section>
 
     <!-- Section 2: Servicios (Bento Grid Style) -->
-    <section class="py-32 bg-surface" id="servicios">
+    <section class="py-32 relative" id="servicios">
         <div class="max-w-7xl mx-auto px-8">
             <div class="mb-20 space-y-4">
                 <h2 class="text-label-md uppercase tracking-[0.3em] text-primary font-bold">Capacidades</h2>
@@ -67,9 +72,6 @@
                             <span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="web">web</span>
                             <h4 class="font-headline text-2xl font-bold mb-4">Desarrollo de Plataformas Web a Medida</h4>
                             <p class="text-on-surface-variant leading-relaxed max-w-md">Creamos arquitecturas escalables y seguras que responden a las necesidades específicas de su negocio, optimizando la experiencia del usuario final.</p>
-                        </div>
-                        <div class="mt-12 flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform">
-                            Ver más <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
                         </div>
                     </div>
                     <div class="absolute right-[-10%] bottom-[-10%] w-64 h-64 bg-primary/5 rounded-full blur-3xl transition-all duration-500 group-hover:bg-primary/10"></div>
@@ -108,13 +110,55 @@
     <!-- Section 3: Sobre Nosotros -->
     <section class="py-32 relative" id="nosotros">
         <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="relative">
-                <div class="rounded-3xl overflow-hidden bg-surface-container-high p-1">
-                    <img alt="Análisis de datos estratégico" class="w-full h-full object-cover rounded-[1.25rem] opacity-70 grayscale" data-alt="Strategic data analysis dashboard on a laptop screen in a dark, minimalist office, focused lighting with soft purple reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEuEos0PCon0Jnt-q7KPpLPp-RxT4aIEvMCzwK-ebM7rwtukLf9GGd4-7o3knejxxVq8WhRE79EzY2by4UtVyA0oQWpPC-9WkZollrQ0mQV2HNLE0_0-CSeKwvSWx6Be1BY8Dgu3sLrVQJQ3k8HZ6fSjeKt-KyRtobwlffayZ6fVc0Fwhngix7JL1T1_RuGBrhc-ej8C6KkSjnequgQzt1MhHWWl4JNAoQUohgekujLW6mqxKw0SgvYRBgmRkwwfcBeM76riMYDNo"/>
-                </div>
-                <div class="absolute -bottom-10 -right-10 glass-card p-8 rounded-2xl border border-white/5 max-w-[280px] hidden md:block">
-                    <div class="text-4xl font-extrabold text-primary mb-2">+100</div>
-                    <div class="text-sm font-label uppercase tracking-widest text-on-surface-variant">Proyectos Exitosos en Chile</div>
+            <div class="relative group h-full min-h-[400px]">
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary/10 to-secondary/10 rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>
+                <div class="relative rounded-3xl overflow-hidden glass-card border border-outline-variant/10 p-8 h-full flex flex-col justify-end">
+                    
+                    <div class="absolute top-8 left-8">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-xs font-bold uppercase tracking-widest text-primary">Rendimiento</span>
+                        </div>
+                        <div class="font-headline text-3xl font-extrabold text-on-surface">Aumentos significativos en la eficiencia y productividad</div>
+                        <div class="text-xs text-on-surface-variant mt-1">Optimización Operativa Promedio</div>
+                    </div>
+
+                    <!-- Animated Bars -->
+                    <div class="flex items-end justify-between gap-3 h-64 mt-20 w-full chart-animate" id="animated-chart">
+                        <!-- Bars will be controlled via CSS animations -->
+                        <div class="w-full bg-surface-container-high rounded-t-lg relative group/bar h-full">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-primary/40 to-primary rounded-t-lg transition-all duration-1000 ease-out opacity-0 h-0 group-hover/bar:brightness-125"></div>
+                        </div>
+                        <div class="w-full bg-surface-container-high rounded-t-lg relative group/bar h-full">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-secondary/40 to-secondary rounded-t-lg transition-all duration-1000 ease-out opacity-0 h-0 group-hover/bar:brightness-125"></div>
+                        </div>
+                        <div class="w-full bg-surface-container-high rounded-t-lg relative group/bar h-full">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-tertiary/40 to-tertiary rounded-t-lg transition-all duration-1000 ease-out opacity-0 h-0 group-hover/bar:brightness-125"></div>
+                        </div>
+                        <div class="w-full bg-surface-container-high rounded-t-lg relative group/bar h-full">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-primary-dim/40 to-primary-dim rounded-t-lg transition-all duration-1000 ease-out opacity-0 h-0 group-hover/bar:brightness-125"></div>
+                        </div>
+                        <div class="w-full bg-surface-container-high rounded-t-lg relative group/bar h-full">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-secondary-dim/40 to-secondary-dim rounded-t-lg transition-all duration-1000 ease-out opacity-0 h-0 group-hover/bar:brightness-125"></div>
+                        </div>
+                        <div class="w-full bg-surface-container-high rounded-t-lg relative group/bar h-full">
+                            <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-primary/60 to-primary rounded-t-lg transition-all duration-1000 ease-out opacity-0 h-0 group-hover/bar:brightness-125">
+                                <!-- Floating tooltip on hover -->
+                                <div class="absolute -top-10 left-1/2 -translate-x-1/2 bg-surface-container-highest text-on-surface text-xs font-bold py-1 px-2 rounded opacity-0 group-hover/bar:opacity-100 transition-opacity">
+                                    Impacto
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex justify-between mt-4 text-[10px] text-on-surface-variant font-bold uppercase tracking-wider">
+                        <span>Fase 1</span>
+                        <span>Fase 2</span>
+                        <span>Fase 3</span>
+                        <span>Fase 4</span>
+                        <span>Fase 5</span>
+                        <span class="text-primary">Actual</span>
+                    </div>
                 </div>
             </div>
             <div class="space-y-8">
@@ -148,7 +192,7 @@
     </section>
 
     <!-- Section 4: Contacto -->
-    <section class="py-32 bg-surface-container-low/30" id="contacto">
+    <section class="py-32 relative" id="contacto">
         <div class="max-w-7xl mx-auto px-8">
             <div class="max-w-4xl mx-auto glass-card p-8 md:p-16 rounded-[2.5rem] border border-white/5 shadow-2xl relative overflow-hidden">
                 <div class="absolute top-0 right-0 w-32 h-32 bg-primary/10 blur-3xl"></div>
@@ -163,11 +207,11 @@
                             </div>
                             <div class="flex items-center gap-4">
                                 <span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-                                <span class="text-on-surface">contacto@abebeto.cl</span>
+                                <a href="mailto:abebetospa@gmail.com" class="text-on-surface hover:text-primary transition-colors">abebetospa@gmail.com</a>
                             </div>
                             <div class="flex items-center gap-4">
                                 <span class="material-symbols-outlined text-primary" data-icon="phone_iphone">phone_iphone</span>
-                                <span class="text-on-surface">+56 2 2XXX XXXX</span>
+                                <a href="tel:+56961499135" class="text-on-surface hover:text-primary transition-colors">+56 9 6149 9135</a>
                             </div>
                         </div>
                     </div>
@@ -195,22 +239,38 @@
 </main>
 
 <!-- Footer Implementation -->
-<footer class="bg-slate-950 border-t border-white/5 full-width bottom-0 mt-20">
+<footer class="bg-slate-950 border-t border-white/5 full-width bottom-0 mt-20 relative z-10">
     <div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto">
         <div class="mb-8 md:mb-0">
             <div class="text-xl font-bold text-slate-200 font-headline mb-2">Abebeto SpA</div>
             <div class="text-slate-500 text-xs uppercase tracking-widest font-label">Consultoría de Alto Nivel</div>
         </div>
         <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
-            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Privacidad</a>
-            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Términos de Servicio</a>
-            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Continuidad Operativa</a>
-            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="#">Soporte</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="privacidad.html">Privacidad</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="terminos.html">Términos de Servicio</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="continuidad.html">Continuidad Operativa</a>
         </div>
         <div class="text-slate-500 text-sm text-center md:text-right">
             © 2026 Abebeto SpA. Todos los derechos reservados.
         </div>
     </div>
 </footer>
+<script>
+    // Intersection Observer to trigger chart animation when it scrolls into view
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    // Optional: stop observing once animated
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 }); // Triggers when 50% of the chart is visible
+
+        const chart = document.getElementById('animated-chart');
+        if (chart) observer.observe(chart);
+    });
+</script>
 </body>
 </html>

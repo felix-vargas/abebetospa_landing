@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Plan de Continuidad Operativa (BCP) | Abebeto SpA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script src="tailwind.config.js"></script>
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body class="bg-background selection:bg-primary/30">
+
+<!-- TopNavBar -->
+<nav class="bg-slate-950/60 backdrop-blur-xl docked full-width top-0 sticky z-50 transition-all duration-300 border-b border-white/5">
+    <div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+        <a href="index.html" class="text-2xl font-extrabold tracking-tight text-slate-50 font-headline hover:text-primary transition-colors">
+            Abebeto SpA
+        </a>
+        <div class="hidden md:flex items-center space-x-8">
+            <a class="text-slate-300 hover:text-indigo-300 transition-colors body-lg" href="index.html#servicios">Servicios</a>
+            <a class="text-slate-300 hover:text-indigo-300 transition-colors body-lg" href="index.html#nosotros">Nosotros</a>
+            <a class="text-slate-300 hover:text-indigo-300 transition-colors body-lg" href="index.html#contacto">Contacto</a>
+        </div>
+    </div>
+</nav>
+
+<main class="py-24">
+    <div class="max-w-4xl mx-auto px-8">
+        <h1 class="font-headline text-4xl md:text-5xl font-extrabold text-on-surface mb-8">Continuidad Operativa y Seguridad (BCP)</h1>
+        
+        <div class="space-y-8 text-on-surface-variant leading-relaxed font-body">
+            <p><strong>Fecha de última actualización:</strong> 24 de marzo de 2026</p>
+            
+            <p>En Abebeto SpA entendemos que la estabilidad tecnológica es un pilar crítico para las operaciones de nuestros clientes. A continuación, detallamos nuestros lineamientos de Business Continuity Plan (BCP) y Disaster Recovery Plan (DRP).</p>
+
+            <section class="space-y-4">
+                <h2 class="font-headline text-2xl font-bold text-on-surface">1. Infraestructura Cloud y Alta Disponibilidad</h2>
+                <p>Todos nuestros desarrollos e infraestructuras propias están desplegados en entornos de Nube Pública (AWS, Azure o Google Cloud) utilizando arquitecturas de alta disponibilidad (High Availability). Implementamos redundancia en múltiples zonas de disponibilidad (Availability Zones) para asegurar la tolerancia a fallos de hardware o red a nivel de centro de datos.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="font-headline text-2xl font-bold text-on-surface">2. Respaldo de Datos (Backups)</h2>
+                <p>Nuestra política de retención de datos se rige por la regla 3-2-1. Ejecutamos copias de seguridad incrementales diarias y respaldos completos semanales de todas las bases de datos y repositorios de código crítico. Estos backups son cifrados en tránsito y en reposo (AES-256) y almacenados en regiones geográficas distintas a la de la infraestructura principal.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="font-headline text-2xl font-bold text-on-surface">3. Tiempos de Respuesta (SLA)</h2>
+                <p>Para clientes con contratos de soporte activo, Abebeto SpA se compromete a un Acuerdo de Nivel de Servicio (SLA) riguroso. Los incidentes críticos (Caída total de servicio, Brechas de seguridad) se atienden con un tiempo de respuesta inicial inferior a 1 hora (24/7/365) y un tiempo objetivo de recuperación (RTO) definido en el anexo técnico de cada proyecto.</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="font-headline text-2xl font-bold text-on-surface">4. Seguridad, Cumplimiento Normativo (Compliance) e IA</h2>
+                <p>Abebeto SpA se adhiere a las normativas chilenas de ciberseguridad para proveedores del Estado y del sector financiero. Empleamos prácticas de <em>DevSecOps</em>, escaneos de vulnerabilidades automatizados (SAST/DAST) y auditorías de código regulares para asegurar que las aplicaciones sean resilientes ante ataques.</p>
+                <p><strong>Integración de Inteligencia Artificial:</strong> Al desplegar modelos de IA o arquitecturas con LLMs, se implementan controles de seguridad específicos (ej. mitigación de Prompt Injection, fugas de memoria o Data Poisoning). Toda comunicación con APIs externas (ej. Azure OpenAI, Google Vertex) está encriptada y sujeta a Data Processing Agreements (DPA) que aseguran la retención nula de los datos procesados en repositorios públicos de entrenamiento ("Zero Data Retention Policy").</p>
+            </section>
+
+            <section class="space-y-4">
+                <h2 class="font-headline text-2xl font-bold text-on-surface">5. Gestión de Incidentes y Comunicación</h2>
+                <p>En caso de una interrupción grave del servicio, Abebeto SpA cuenta con un protocolo de escalamiento estructurado. Se designará un Oficial de Respuesta a Incidentes (IRO) que mantendrá comunicación transparente y directa con los stakeholders técnicos y ejecutivos del cliente, proporcionando reportes de estado (Status Reports) cada 2 horas hasta la mitigación del incidente, seguido de un reporte post-mortem técnico detallado (RCA - Root Cause Analysis).</p>
+            </section>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-slate-950 border-t border-white/5 full-width mt-20">
+    <div class="flex flex-col md:flex-row justify-between items-center w-full px-8 py-12 max-w-7xl mx-auto">
+        <div class="mb-8 md:mb-0">
+            <div class="text-xl font-bold text-slate-200 font-headline mb-2">Abebeto SpA</div>
+            <div class="text-slate-500 text-xs uppercase tracking-widest font-label">Consultoría de Alto Nivel</div>
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="privacidad.html">Privacidad</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="terminos.html">Términos de Servicio</a>
+            <a class="text-slate-500 hover:text-slate-300 transition-colors text-xs uppercase tracking-widest font-label" href="continuidad.html">Continuidad Operativa</a>
+        </div>
+        <div class="text-slate-500 text-sm text-center md:text-right">
+            © 2026 Abebeto SpA. Todos los derechos reservados.
+        </div>
+    </div>
+</footer>
+</body>
+</html>
